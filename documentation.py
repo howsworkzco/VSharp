@@ -28,6 +28,8 @@ local_test_val = keywords(test_keyword)
 print(local_test_val)
 
 '''--import--'''
+# import regex
+'''--simple calculator--'''
 import re
 TOKEN_TYPES = [
     ('NUMBER',  r'\d+(\.\d*)?'), # Matches integers or floats
@@ -63,9 +65,15 @@ def lexer(source_code):
     return tokens
 
 # Example usage:
-code = "10 + 5 * 2"
+code = "10 + 5 * 2" #[code should be ran from computer field or textbox, or CLI.]
 my_tokens = lexer(code)
 print(my_tokens)
+
+'''keywords array'''
+
+starting_keywords = ["create","delete","show","hide","startup","restart","shutdown","reboot","software","settings"] #show = show tables, hide = hide interface #
+keywords_dict = {'create_command': 'create',}
+
 
 
 
